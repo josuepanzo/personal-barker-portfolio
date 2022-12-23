@@ -1,0 +1,416 @@
+@charset "UTF-8";
+
+:root {
+    --color-blue: #0615a0;
+    --color-black: black;
+    --font-padrao: Arial, Helvetica, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-padrao);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 6%;
+    border-bottom: 1px solid var(--color-blue);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+nav img {
+    width: 100px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 2%;
+}
+
+.nav-links ul li a {
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+/*------ HOVER LINKS ------*/
+.nav-links ul li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: var(--color-blue);
+    margin: auto;
+    transition-duration: 1s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/*----- Text Header-------*/
+.text-header {
+    position: absolute;
+    top: 40%;
+    left: 18%;
+    transform: translateX(-15%);
+}
+
+.text-header h1 {
+    font-size: 3em;
+    margin-top: 7px;
+}
+
+.text-header h2 {
+    font-size: 1.8em;
+    margin: 10px 0;
+    font-weight: 500;
+    color: rgb(110, 109, 109);
+}
+
+button {
+    margin-top: 10px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    background-color: var(--color-black);
+}
+
+button:active {
+    transform: scale(1.1);
+}
+
+.hire-me-btn {
+    background-color: transparent;
+    border: 1px solid var(--color-blue);
+}
+
+.down-cv-btn {
+    background-color: var(--color-blue);
+    color: white;
+    border: 1px solid var(--color-blue);
+    margin-right: 10px;
+}
+
+/*-------- Profile Image ---------*/
+.profile-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 530px;
+}
+
+main {
+    width: 90%;
+    margin: -50px auto;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+    border-radius: 50px 50px 0 0;
+    position: relative;
+}
+
+.about-me {
+    display: flex;
+    flex-basis: 31%;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 70%;
+    margin: auto;
+    padding: 50px 0;
+    background-color: white;
+    text-align: left;
+}
+
+.about-me img {
+    width: 300px;
+    height: 300px;
+    margin-right: 30px;
+}
+
+.title {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.sub-title {
+    font-size: 1.3em;
+    font-weight: 540;
+    margin: 5px 0;
+}
+
+.pharg {
+    font-size: 1.1em;
+    margin: 15px 0;
+    line-height: 22px;
+    text-align: justify;
+}
+
+.read-more-btn {
+    color: white;
+    border: 1px solid black;
+}
+
+/*------ SECTION SERVICES --------*/
+.services {
+    width: 70%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services-col {
+    flex-basis: 31%;
+    padding: 15px;
+    background-color: var(--color-black);
+    text-align: center;
+    margin: 10px 20px 10px 0;
+}
+
+.services-col p {
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    font-weight: normal;
+}
+
+.circle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+}
+
+.circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.hero-btn {
+    background-color: white;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.hero-btn:hover {
+    transform: scale(1.1);
+}
+
+/*------- SECTION CONTACT US -------*/
+.contact {
+    width: 100%;
+    background-color: var(--color-black);
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.contact h1 {
+    font-size: 1.5em;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.btn {
+    color: var(--color-black);
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 10px 35px;
+    margin-top: 10px;
+}
+
+/*-------- SECTION FOOTER --------*/
+footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    border-top: 2px solid var(--color-blue);
+    margin-top: 30px;
+    position: relative;
+}
+
+footer h1 {
+    font-size: 1.5em;
+}
+
+footer p {
+    text-align: center;
+    line-height: 22px;
+    margin: 10px auto;
+    width: 70%;
+}
+
+footer img {
+    margin: 10px 3px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    background-color: steelblue;
+    transition-duration: 1s;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:active {
+    color: var(--color-blue);
+}
+
+.external-links::before {
+    content: '\1F517';
+}
+
+.icon-nav {
+    width: 22px;
+    height: 22px;
+    margin: 15px;
+    display: none;
+    cursor: pointer;
+}
+
+@media(max-width: 800px) {
+    * {
+        box-sizing: border-box;
+    }
+    header {
+        height: 420px;
+    }
+    header p {
+        padding-top: 50px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        display: none;
+        top: 2%;
+        right: 0;
+        text-align: center;
+        z-index: 1;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        border-radius: 30px 0 0 30px;
+        transition: 1s;
+    }
+    .nav-links ul {
+        margin-top: 50%;
+    }
+    .icon-nav {
+        display: block;
+    }
+    .text-header h1 {
+        font-size: 1.5em;
+    }
+    .text-header h2 {
+        font-size: 1.4em;
+    }
+    .contact h1 {
+        font-size: 1.4em;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .about-me {
+        flex-direction: column;
+        display: flex;
+        padding: 20px 0;
+        text-align: center;
+    }
+    .about-me img {
+        width: 200px;
+        height: 220px;
+        margin: auto;
+    }
+    .about-me h1 {
+        margin-top: 30px;
+    }
+    .profile-image {
+        background-image: none;
+        display: none;
+    }
+    .down-cv-btn {
+        margin-right: 2px;
+    }
+    .text-header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media(max-width: 1200px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .services-col {
+        flex-grow: 1;
+        margin: 10px;
+    }
+    .profile-image {
+        position: absolute;
+        bottom: 0;
+        top: 20%;
+        left: 50%;
+        height: 530px;
+    }
+    .about-me {
+        justify-content: space-evenly;
+        width: 80%;
+        text-align: center;
+    }
+    .services {
+        width: 80%;
+    }
+    main {
+        margin-top: -7px;
+    }
+}
